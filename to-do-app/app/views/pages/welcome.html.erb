@@ -1,0 +1,16 @@
+<h1>To Do</h1>
+  <div ng-app="app">
+    <div ng-controller="todoCtrl">
+      {{ 1 + 1 }}
+      <div id="todoList">
+        <ul>
+          <li ng-repeat= "todo in todoList">{{todo}}</li>
+        </ul>
+      
+        <input ng-model="newTask" >
+        <button ng-click="addTask(newTask)" >Add Task</button>
+      </div>
+
+
+    </div>
+  </div>

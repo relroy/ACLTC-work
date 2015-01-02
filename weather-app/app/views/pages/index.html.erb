@@ -1,0 +1,25 @@
+<div class= "container">
+
+ <h1> Your current forecast is:</h1>
+<table class= "table">
+
+<h2><%= @response.title %></h2>
+<h4><%= @response.condition.date %></h4>
+<h4><%= @response.condition.text %></h4>
+<h4>Fahrenheit = <%= @response.condition.temp %> degrees</h4>
+<h4>Celsius = <%=@response.condition.temp %> degrees</h4>
+</table>
+
+<h3>5 Day Forecast</h3>
+<% @response.forecasts.each do |forecast| %>
+  <h2><%= forecast.day %></h2>
+  <h4><%= forecast.text %></h4>
+  <h4><%= forecast.low %> Low</h4>
+  <h4><%= forecast.high %> High</h4>
+  <img src="<%= @response.image.url %>">
+<% end %>
+
+</div>
+
+
+
